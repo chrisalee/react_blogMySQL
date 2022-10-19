@@ -1,0 +1,14 @@
+footer {
+  margin-top: 100px;
+  padding: 20px;
+  background-color: var(--clr-accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+
+  img {
+    height: 50px;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,9 @@
+body {
+  font-family: var(--ff-secondary);
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
