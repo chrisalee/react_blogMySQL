@@ -4,3 +4,15 @@ Create a full-stack app using React, Node.js, and MySQL.
 react-router-dom outlet
 -use for the navbar and the footer so dont have to add to all those pages for larger apps, the layout of the pages
 
+create pages
+-home page
+-login
+-register
+-single
+-write
+
+components
+-navbar => used on homepage single page and write page
+-footer => used on homepage single page and write page
+
+create layout 
