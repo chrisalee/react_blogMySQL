@@ -1,0 +1,6 @@
+React MySQL blog app project. React blog website application
+Create a full-stack app using React, Node.js, and MySQL.
+
+react-router-dom outlet
+-use for the navbar and the footer so dont have to add to all those pages for larger apps, the layout of the pages
+
