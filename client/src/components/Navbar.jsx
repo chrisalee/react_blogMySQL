@@ -49,7 +49,7 @@ const Navbar = () => {
             </Link>
           {/* )} */}
           <span className="write--link">
-            <Link className="write" to="/write">
+            <Link className="nav__write" to="/write">
               Write
             </Link>
           </span>
