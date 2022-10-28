@@ -38,3 +38,15 @@ npm i axios
 
 add proxy to client/package.json
 
+**had to use mysql2
+npm i mysql2
+
+login page, auth login, 
+npm i jsonwebtoken
+npm i cookie-parser  --> gets added to index.js on backend
+
+react-context api
+context folder
+authContext (to handle login logout)
+
+update navbar to allow logout

@@ -41,12 +41,12 @@
 /* custom scrollbar */
 /* width */
 ::-webkit-scrollbar {
-  width: 1.125em;
+  width: 1em;
 }
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: var(--bs);
-  border-radius: 1em;
+  border-radius: .3em;
 }
 /* Track color */
 ::-webkit-scrollbar-track-piece {
@@ -55,7 +55,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--clr-dark);
-  border-radius: 1em;
+  border-radius: .3em;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {

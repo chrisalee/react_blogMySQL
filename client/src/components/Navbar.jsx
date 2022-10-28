@@ -1,10 +1,12 @@
-// import React, { useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
 import Logo from "../img/logo.png";
 import "./navbar.scss";
 
 const Navbar = () => {
-    // const { currentUser, logout } = useContext(AuthContext);
+  const { currentUser, logout } = useContext(AuthContext);
+
   return (
     <div className="navbar">
       <div className="container">
@@ -15,10 +17,10 @@ const Navbar = () => {
         </div>
         <div className="links">
           <div className="dropdown">
-              <p>
-                Categories
-                {/* <iconify-icon icon="carbon:collapse-categories"></iconify-icon> */}
-              </p> 
+            <p>
+              Categories
+              {/* <iconify-icon icon="carbon:collapse-categories"></iconify-icon> */}
+            </p>
             <div className="dropdown--content">
               <Link className="link" to="/?cat=art">
                 <h6>Art</h6>
@@ -40,14 +42,14 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          {/* <span>{currentUser?.username}</span>
-          {currentUser ? ( */}
-            <span >Logout</span>
-          {/* ) : ( */}
+          <span>{currentUser?.username}</span>
+          {currentUser ? (
+            <span onClick={logout}>Logout</span>
+          ) : (
             <Link className="link" to="/login">
               Login
             </Link>
-          {/* )} */}
+          )}
           <span className="write--link">
             <Link className="nav__write" to="/write">
               Write
