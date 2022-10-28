@@ -15,4 +15,26 @@ components
 -navbar => used on homepage single page and write page
 -footer => used on homepage single page and write page
 
-create layout 
+create layout for frontend
+
+start backend (server)
+npm iniy -y
+npm i express mysql nodemon
+
+create index.js
+db.js -> can be in index.js
+create tables in mysql
+
+routes and controller
+
+in auth controller
+npm i bcrypt (for password hashing)
+
+update register page to connect to backend
+useState
+handleChange -> target.name is name of item in db
+handleSubmit
+npm i axios
+
+add proxy to client/package.json
+

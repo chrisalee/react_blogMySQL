@@ -1,7 +1,29 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
+  const [inputs, setInputs] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:5000/api/auth/register/", inputs);
+      console.log(res);
+    } catch (err) {
+      console.log('errrrrr--->>>>', err)
+    }
+  }; 
+
   return (
     <div className="auth">
       <h1 className="title--wave">
@@ -15,11 +37,29 @@ const Register = () => {
         <span style={{ "--item": 8 }}>R</span>
       </h1>
       <form>
-        <input required type="text" placeholder="username" />
-        <input required type="email" placeholder="email" />
-        <input required type="password" placeholder="password" />
-        <button>Register</button>
-        <p>Error message here</p>
+        <input
+          required
+          type="text"
+          placeholder="username"
+          name="username"
+          onChange={handleChange}
+        />
+        <input
+          required
+          type="email"
+          placeholder="email"
+          name="email"
+          onChange={handleChange}
+        />
+        <input
+          required
+          type="password"
+          placeholder="password"
+          name="password"
+          onChange={handleChange}
+        />
+        <button onClick={handleSubmit}>Register</button>
+        {/* {err && <p>{err}</p>} */}
         <span>
           <Link to="/login" className="register--link">
             Already have an account? <br />
