@@ -21,5 +21,5 @@ app.use('/api/posts', postRoutes);
 
 
 app.listen(port, () => {
-    console.log(`Connected to the server on port ${port}. BOOM BABY!!`)
+    console.log(`Connected to the server on port ${port}. BOOM BABY!!`);
 })

@@ -50,3 +50,16 @@ context folder
 authContext (to handle login logout)
 
 update navbar to allow logout
+
+postController, postRoutes (CRUD)
+getAllPosts, getPost, addPost, deletePost, updatePost
+
+update home page to map all from db
+useState, useEffect
+useLocation added for the categories section
+dont need hard code data anymore
+
+update single page to display info from db
+useContext, useState, useEffect
+npm i moment
+

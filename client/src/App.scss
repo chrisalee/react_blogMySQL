@@ -50,7 +50,7 @@ body {
         }
       }
 
-      form {
+      .form {
         display: flex;
         flex-direction: column;
         padding: 50px;
@@ -60,13 +60,17 @@ body {
         border-radius: 3px;
         box-shadow: var(--bs);
 
-        input {
+        .form__input {
+          display: flex;
+          flex-direction: column;
           padding: 15px;
           border: none;
           border-bottom: 1px solid var(--clr-dark);
           font-family: var(--ff-secondary);
-
+          width: 100%;
+          
           &:focus {
+            border-bottom: 1px solid var(--clr-accent);
             box-shadow: var(--bs);
             font-family: var(--ff-secondary);
             outline: none !important;
@@ -87,7 +91,7 @@ body {
           }
         }
 
-        p {
+        p, .text-danger {
           font-size: var(-fs-body);
           color: red;
           text-align: center;

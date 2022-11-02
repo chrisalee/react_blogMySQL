@@ -37,18 +37,20 @@ const Login = () => {
         <span style={{ "--item": 4 }}>I</span>
         <span style={{ "--item": 5 }}>N</span>
       </h1>
-      <form>
+      <form className="form">
         <input
           type="text"
           placeholder="username"
           name="username"
           onChange={handleChange}
+          className='form__input'
         />
         <input
           type="password"
           placeholder="password"
           name="password"
           onChange={handleChange}
+          className='form__input'
         />
         <button onClick={handleSubmit}>Login</button>
         {err && <p>{err}</p>}
