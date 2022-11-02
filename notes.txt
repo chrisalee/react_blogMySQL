@@ -63,3 +63,10 @@ update single page to display info from db
 useContext, useState, useEffect
 npm i moment
 
+allow write page to upload new posts
+posts add image, get stored in localStorage
+npm i multer
+change img src for menu, single, home 
+
+had an issue with a p tag being included in the description when uploading
+npm i dompurify
