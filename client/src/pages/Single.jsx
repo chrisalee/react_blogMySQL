@@ -4,6 +4,7 @@ import { AuthContext } from "../context/authContext";
 import Menu from "../components/Menu";
 import axios from "axios";
 import moment from "moment";
+import DOMPurify from "dompurify";
 
 const Single = () => {
   const [post, setPost] = useState({});
@@ -37,10 +38,15 @@ const Single = () => {
     }
   };
 
+  // const getText = (html) =>{
+  //   const doc = new DOMParser().parseFromString(html, "text/html")
+  //   return doc.body.textContent
+  // };
+
   return (
     <div className="single">
       <div className="content">
-        <img src={post?.img} alt={post.title} />
+        <img src={`../upload/${post?.img}`} alt={post.title} />
         <div className="user">
           {post.userImg && (
             <img
@@ -53,7 +59,7 @@ const Single = () => {
             <span>{post.username}</span>
             <p>posted {moment(post.date).fromNow()}</p>
           </div>
-          {/* {currentUser.username === post.username && ( */}
+          {currentUser.username === post.username && (
             <div className="edit">
               <Link to={`/write?=id`} className="edit--btns">
                 <iconify-icon icon="entypo:edit"></iconify-icon>
@@ -62,10 +68,15 @@ const Single = () => {
                 <iconify-icon icon="fluent:delete-48-regular"></iconify-icon>
               </p>
             </div>
-          {/* )} */}
+          )}
         </div>
         <h1>{post.title}</h1>
-        <p className="user__desc">{post.desc}</p>
+        <p className="user__desc"
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(post.desc),
+          }}
+          >
+        </p>
       </div>
       <div className="menu">
         <Menu cat={post.cat}/>

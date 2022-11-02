@@ -41,21 +41,34 @@
       }
     }
 
-    .links {
+    .options__login-logout {
       display: flex;
+      text-align: center;
       align-items: center;
-      gap: 10px;
-      margin-right: 80px;
-      
-      .link {
-        color: var(--clr-accent);
-        text-decoration: none;
+      justify-content: space-between;
+      gap: 20px;
 
-        &:hover {
-          color: #959595;
-          border-bottom: 1px solid #959595;
-        }
+      .options:hover {
+        color: #959595;
+        border-bottom: 1px solid #959595;
       }
+    }
+      
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: 80px;
+        
+        .link {
+          color: var(--clr-accent);
+          text-decoration: none;
+          
+          &:hover {
+            color: #959595;
+            border-bottom: 1px solid #959595;
+          }
+        }
 
 
       h6 {
